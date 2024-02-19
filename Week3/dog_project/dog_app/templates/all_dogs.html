@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block title %} Dogs {% endblock %}
+
+
+{% block content %}
+<ol>
+  {% for dog_name in dog_names %}
+  <li><a href="{% url 'dog_view' dog_name=dog_name %}">{{ dog_name }}</a></li>
+  {% endfor %}
+</ol>
+{% endblock %}

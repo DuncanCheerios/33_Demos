@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block title %} {{ dog_name }} Info {% endblock %}
+
+
+{% block content %}
+<div class="container">
+  <h1> {{ dog_name }}, {{ dog_age }}</h1>
+  <p> {{ dog_summary }}</p>
+  <div>
+    <p>Likes: </p>
+    <ul>
+      {% for item in dog_favorites %}
+        <li> {{ item }}</li>
+      {% endfor %}
+    </ul>
+  </div>
+</div>
+{% endblock %}
