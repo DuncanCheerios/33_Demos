@@ -34,7 +34,7 @@ def view_dog(request, dog_name):
        context = dogs_info[dog_name]
        return render(request, "dog_app/dog_view.html", context)
     else: 
-        return redirect("all_dogs")
+        return redirect(reverse("index"))
 
     
 def all_dogs(request):
